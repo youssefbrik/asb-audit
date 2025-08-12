@@ -1,0 +1,39 @@
+{
+  "appId": "com.brik.associes.asbaudit",
+  "productName": "ASB AUDIT - BRIK & ASSOCIES CONSULTING (C)",
+  "copyright": "Copyright © 2025 BRIK & ASSOCIES CONSULTING",
+  "directories": {
+    "output": "dist_electron",
+    "buildResources": "build"
+  },
+  "files": [
+    "dist/**/*",
+    "main.js",
+    "package.json"
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": [
+          "x64"
+        ]
+      },
+      {
+        "target": "portable",
+        "arch": [
+          "x64"
+        ]
+      }
+    ],
+    "icon": "build/icon.ico"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "perMachine": false,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "ASB AUDIT - BRIK & ASSOCIES CONSULTING (C)"
+  }
+}
