@@ -1,0 +1,40 @@
+{
+  "name": "asb_audit",
+  "version": "1.0.0",
+  "description": "ASB AUDIT - BRIK & ASSOCIES CONSULTING (C)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win --x64 --config electron-builder.json"
+  },
+  "build": {
+    "appId": "com.brik.associes.asbaudit",
+    "productName": "ASB AUDIT - BRIK & ASSOCIES CONSULTING (C)",
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist_electron"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false
+    }
+  },
+  "author": "BRIK & ASSOCIES CONSULTING",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.0"
+  },
+  "dependencies": {}
+}
